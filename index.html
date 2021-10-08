@@ -1,1 +1,38 @@
-<!doctype html><html lang="en" class="no-js"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Kinetic Type with Three.js</title><meta name="description" content="Some examples of kinetic typography using Three.js"/><meta name="keywords" content="typography, webgl, animation, kinetic, three.js, sphere, cloth"/><meta name="author" content="Codrops"/><link rel="shortcut icon" href="favicon.ico"/><link rel="stylesheet" href="https://use.typekit.net/ppk0edc.css"/><link rel="stylesheet" href="css/styles.css"/><script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.")</script></head><body><main><div class="frame"><div class="frame__demos"><a class="frame__demo" href="./3DGridContentPreview/">Grid</a> <a class="frame__demo" href="./KineticTypePageTransition/">Kinetic</a> <a class="frame__demo" href="./MenuThumbStackAnimation/">Stack</a> <a class="frame__demo" href="./ShapesSlideshow/">Shape</a></div></div><div class="content"><div id="webgl"></div></div></main><script src="main.js?9e2e3beedbc3d99744fa"></script></body></html>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Happy Birthday!</title>
+
+  <link rel="stylesheet" href="styles/flexbox-center-container.css" media="all">
+  <link rel="stylesheet" href="styles/system-fonts.css" media="all">
+  <link rel="stylesheet" href="styles/style.css" media="all">
+</head>
+
+<body>
+  <canvas id=c></canvas>
+  <canvas id="confetti"></canvas>
+  <div class="container" id="count">
+    <h1 id="head">Countdown to your birthday:</h1>
+    <ul>
+      <li><span id="day"></span>days</li>
+      <li><span id="hour"></span>hours</li>
+      <li><span id="minute"></span>minutes</li>
+      <li><span id="second"></span>seconds</li>
+    </ul>
+  </div>
+  <div id="merrywrap" class="merrywrap">
+    <canvas id="snowfall"></canvas>
+    <div class="giftbox">
+      <div class="cover">
+        <div></div>
+      </div>
+      <div class="box"></div>
+    </div>
+</body>
+<script src="scripts/confetti.min.js" charset="utf-8"></script>
+<script src="scripts/index.js" charset="utf-8"></script>
+
+</html>
