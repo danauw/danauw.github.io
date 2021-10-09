@@ -12,11 +12,10 @@ body {
   background: #ffffff;
   overflow: hidden;
   margin: 0;
-    --color-link: #000;
-    --color-link-hover: #ff5ba4;
-    font-family: rucksack, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  --color-link: #000;
+  --color-link-hover: #ff5ba4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .container {
   color: rgba(55, 59, 65, 0.8);
@@ -191,6 +190,8 @@ a {
     color: var(--color-link);
     outline: none;
     position: relative;
+    font-family: rucksack, sans-serif;
+    font-size: 18px;
 }
 
 a::after {
@@ -240,75 +241,23 @@ a:focus-visible {
     background: transparent;
 }
 
-.frame {
-    padding: 3rem 5vw;
+#links {
+  position: absolute;
+  left: 5rem;
+  bottom: 5rem;
+  z-index: 100;
+}
+
+#links > a:not(:last-child) {
+  margin-right: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  #links {
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
     text-align: center;
-    position: relative;
-    z-index: 1000;
-}
-
-.frame__title {
-    font-size: 1.25rem;
-    margin: 0 0 1rem;
-}
-
-.frame__title span {
-    position: absolute;
-    pointer-events: none;
-    opacity: 0;
-}
-
-.frame__links {
-    display: inline;
-}
-
-.frame__links a:not(:last-child),
-.frame__demos a:not(:last-child) {
-    margin-right: 1rem;
-}
-
-.frame__demos {
-    margin: 1rem 0;
-}
-
-@media screen and (min-width: 53em) {
-    .frame {
-        position: fixed;
-        text-align: left;
-        z-index: 100;
-        top: 0;
-        left: 0;
-        display: grid;
-        align-content: space-between;
-        width: 100%;
-        max-width: none;
-        height: 100vh;
-        padding: 2rem 3.5rem;
-        pointer-events: none;
-        grid-template-columns: 25% 50% 25%;
-        grid-template-rows: auto auto auto;
-        grid-template-areas: 'title links info'
-                            '... ... ...'
-                            'demos demos nav';
-    }
-    .frame__demos {
-        margin: 0;
-        grid-area: demos;
-        justify-self: start;
-        align-self: end;
-    }
-    .frame__links {
-        grid-area: links;
-        padding: 0;
-        justify-self: center;
-    }
-    .frame__info {
-        grid-area: info;
-        justify-self: end;
-           align-self: start;
-    }
-    .frame a,
-    .frame button {
-        pointer-events: auto;
-    }
+  }
 }

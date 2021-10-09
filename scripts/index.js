@@ -5,6 +5,7 @@ const giftbox = document.getElementById('merrywrap');
 const canvasC = document.getElementById('c');
 const urlParams = new URLSearchParams(window.location.search);
 const belated = urlParams.has('belated');
+const isMobile = navigator.userAgentData.mobile;
 let year = '2021'
 if (belated) {
   year = '2020';
@@ -60,9 +61,9 @@ x = setInterval(function() {
     hh = h / 2,
     opts = {
       strings: ['HAPPY', 'BIRTHDAY!', config.name],
-      charSize: 72,
-      charSpacing: 82,
-      lineHeight: 92,
+      charSize: isMobile ? 40 : 72,
+      charSpacing: isMobile ? 45 : 82,
+      lineHeight: isMobile ? 50 : 92,
 
       cx: w / 2,
       cy: h / 2,
@@ -92,8 +93,8 @@ x = setInterval(function() {
       balloonSpawnTime: 20,
       balloonBaseInflateTime: 10,
       balloonAddedInflateTime: 10,
-      balloonBaseSize: 52,
-      balloonAddedSize: 52,
+      balloonBaseSize: isMobile ? 30 : 52,
+      balloonAddedSize: isMobile ? 30 : 52,
       balloonBaseVel: 0.4,
       balloonAddedVel: 0.4,
       balloonBaseRadian: -(Math.PI / 2 - 0.5),
@@ -353,7 +354,7 @@ x = setInterval(function() {
 
         if (this.cy + this.size < -hh || this.cx < -hw || this.cy > hw)
           this.phase = 'done';
-          links.style.display = 'grid';
+          links.style.display = 'block';
       }
     }
   };
