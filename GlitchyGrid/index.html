@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Glitchy Grid Layout Slideshow</title>
+    <meta
+      name="description"
+      content="An experimental slideshow with a custom grid layout and a glitch hover effect."
+    />
+    <meta
+      name="keywords"
+      content="css grid, glitch, slideshow, hover, magnetic, navigation, javascript, gsap"
+    />
+    <link rel="shortcut icon" href="favicon.26242483.ico" />
+    <link rel="stylesheet" href="https://use.typekit.net/qhm2ggg.css" />
+    <link rel="stylesheet" type="text/css" href="base.98fd6c19.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+      document.documentElement.className = "js";
+
+      var supportsCssVars = function supportsCssVars() {
+        var e,
+          t = document.createElement("style");
+        return (
+          (t.innerHTML = "root: { --tmp-var: bold; }"),
+          document.head.appendChild(t),
+          (e = !!(
+            window.CSS &&
+            window.CSS.supports &&
+            window.CSS.supports("font-weight", "var(--tmp-var)")
+          )),
+          t.parentNode.removeChild(t),
+          e
+        );
+      };
+
+      supportsCssVars() ||
+        alert(
+          "Please view this demo in a modern browser that supports CSS Variables."
+        );
+    </script>
+  </head>
+  <body class="loading">
+    <main>
+      <div class="frame">
+        <nav class="frame__nav">
+          <button class="frame__nav-item frame__nav-item--current"></button>
+          <button class="frame__nav-item"></button>
+          <button class="frame__nav-item"></button>
+        </nav>
+      </div>
+      <div class="content">
+        <div class="content__slide content__slide--current">
+          <div
+            class="content__slide-item"
+            style="background-image: url('../images/1.jpg')"
+          ></div>
+          <div
+            class="content__slide-item"
+            style="background-image: url('../images/2.jpg')"
+          ></div>
+          <div
+            class="content__slide-item"
+            style="background-image: url('../images/3.jpg')"
+          ></div>
+          <div
+            class="content__slide-item"
+            style="background-image: url('../images/4.jpg')"
+          ></div>
+          <div
+            class="content__slide-item"
+            style="background-image: url('../images/5.jpg')"
+          ></div>
+          <div
+            class="content__slide-item"
+            style="background-image: url('../images/6.jpg')"
+          ></div>
+          <div
+            class="content__slide-item"
+            style="background-image: url('../images/7.jpg')"
+          ></div>
+          <div
+            class="content__slide-item"
+            style="background-image: url('../images/8.jpg')"
+          ></div>
+          <div class="content__slide-text">
+            <span class="text text--font1">Hold <em>fast</em></span>
+            <span class="text text--font2">like an anchor</span>
+            <span class="text text--font3">in <em>the</em> storm</span>
+          </div>
+        </div>
+        <div class="content__slide">
+          <div
+            class="content__slide-item"
+            style="background-image: url('../images/9.jpg')"
+          ></div>
+          <div
+            class="content__slide-item"
+            style="background-image: url('../images/10.jpg')"
+          ></div>
+          <div
+            class="content__slide-item"
+            style="background-image: url('../images/11.jpg')"
+          ></div>
+          <div
+            class="content__slide-item"
+            style="background-image: url('../images/12.jpg')"
+          ></div>
+          <div
+            class="content__slide-item"
+            style="background-image: url('../images/13.jpg')"
+          ></div>
+          <div
+            class="content__slide-item"
+            style="background-image: url('../images/14.jpg')"
+          ></div>
+          <div
+            class="content__slide-item"
+            style="background-image: url('../images/15.jpg')"
+          ></div>
+          <div
+            class="content__slide-item"
+            style="background-image: url('../images/16.jpg')"
+          ></div>
+          <div class="content__slide-text">
+            <span class="text text--font1">Being <em>free</em></span>
+            <span class="text text--font2">is a state</span>
+            <span class="text text--font3"><em>of</em> mind</span>
+          </div>
+        </div>
+        <div class="content__slide">
+          <div
+            class="content__slide-item"
+            style="background-image: url('../images/17.jpg')"
+          ></div>
+          <div
+            class="content__slide-item"
+            style="background-image: url('../images/18.jpg')"
+          ></div>
+          <div
+            class="content__slide-item"
+            style="background-image: url('../images/19.jpg')"
+          ></div>
+          <div
+            class="content__slide-item"
+            style="background-image: url('../images/20.jpg')"
+          ></div>
+          <div
+            class="content__slide-item"
+            style="background-image: url('../images/21.jpg')"
+          ></div>
+          <div
+            class="content__slide-item"
+            style="background-image: url('../images/22.jpg')"
+          ></div>
+          <div
+            class="content__slide-item"
+            style="background-image: url('../images/23.jpg')"
+          ></div>
+          <div
+            class="content__slide-item"
+            style="background-image: url('../images/24.jpg')"
+          ></div>
+          <div class="content__slide-text">
+            <span class="text text--font1">There is <em>no final</em></span>
+            <span class="text text--font2">one, revolutions</span>
+            <span class="text text--font3"><em>are</em> infinite</span>
+          </div>
+        </div>
+        <button class="content__action">
+          <span class="content__action-text">Enter</span>
+        </button>
+      </div>
+    </main>
+    <script src="js.00a46daa.js"></script>
+  </body>
+</html>

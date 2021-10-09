@@ -1,5 +1,6 @@
 const count = document.getElementById('count');
 const head = document.getElementById('head');
+const links = document.getElementById('links');
 const giftbox = document.getElementById('merrywrap');
 const canvasC = document.getElementById('c');
 const urlParams = new URLSearchParams(window.location.search);
@@ -16,6 +17,7 @@ const config = {
 function hideEverything() {
   head.style.display = 'none';
   count.style.display = 'none';
+  links.style.display = 'none';
   giftbox.style.display = 'none';
   canvasC.style.display = 'none';
 }
@@ -351,6 +353,7 @@ x = setInterval(function() {
 
         if (this.cy + this.size < -hh || this.cx < -hw || this.cy > hw)
           this.phase = 'done';
+          links.style.display = 'grid';
       }
     }
   };

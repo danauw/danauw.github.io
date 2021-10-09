@@ -11,6 +11,12 @@ canvas {
 body {
   background: #ffffff;
   overflow: hidden;
+  margin: 0;
+    --color-link: #000;
+    --color-link-hover: #ff5ba4;
+    font-family: rucksack, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 .container {
   color: rgba(55, 59, 65, 0.8);
@@ -179,4 +185,130 @@ li span {
       transform: translateY(100%);
       opacity: 0;
  }
+}
+a {
+    text-decoration: none;
+    color: var(--color-link);
+    outline: none;
+    position: relative;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    background: currentColor;
+    left: 0;
+    bottom: -25%;
+    transform: scale3d(0,1,1);
+    opacity: 0;
+    transform-origin: 0% 50%;
+    transition: transform 0.3s, opacity 0s 0.3s;
+}
+
+a:hover::after {
+    opacity: 1;
+    transition: transform 0.3s;
+    transform: scale3d(1,1,1);
+}
+
+a:hover {
+    color: var(--color-link-hover);
+    outline: none;
+}
+
+/* Better focus styles from https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible */
+a:focus {
+    /* Provide a fallback style for browsers
+     that don't support :focus-visible */
+    outline: none;
+    background: lightgrey;
+}
+
+a:focus:not(:focus-visible) {
+    /* Remove the focus indicator on mouse-focus for browsers
+     that do support :focus-visible */
+    background: transparent;
+}
+
+a:focus-visible {
+    /* Draw a very noticeable focus style for
+     keyboard-focus on browsers that do support
+     :focus-visible */
+    outline: 2px solid red;
+    background: transparent;
+}
+
+.frame {
+    padding: 3rem 5vw;
+    text-align: center;
+    position: relative;
+    z-index: 1000;
+}
+
+.frame__title {
+    font-size: 1.25rem;
+    margin: 0 0 1rem;
+}
+
+.frame__title span {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.frame__links {
+    display: inline;
+}
+
+.frame__links a:not(:last-child),
+.frame__demos a:not(:last-child) {
+    margin-right: 1rem;
+}
+
+.frame__demos {
+    margin: 1rem 0;
+}
+
+@media screen and (min-width: 53em) {
+    .frame {
+        position: fixed;
+        text-align: left;
+        z-index: 100;
+        top: 0;
+        left: 0;
+        display: grid;
+        align-content: space-between;
+        width: 100%;
+        max-width: none;
+        height: 100vh;
+        padding: 2rem 3.5rem;
+        pointer-events: none;
+        grid-template-columns: 25% 50% 25%;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 'title links info'
+                            '... ... ...'
+                            'demos demos nav';
+    }
+    .frame__demos {
+        margin: 0;
+        grid-area: demos;
+        justify-self: start;
+        align-self: end;
+    }
+    .frame__links {
+        grid-area: links;
+        padding: 0;
+        justify-self: center;
+    }
+    .frame__info {
+        grid-area: info;
+        justify-self: end;
+           align-self: start;
+    }
+    .frame a,
+    .frame button {
+        pointer-events: auto;
+    }
 }
