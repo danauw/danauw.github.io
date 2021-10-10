@@ -48,12 +48,11 @@
     font = fontList[Math.floor(Math.random()*fontList.length)],
     remark = remarks[Math.floor(Math.random()*remarks.length)]
     froms = [{
-      name: 'Mikki',
-      alias: '선생님 / 오빠 Mikki',
-      message: "I'll make it simple, wishing you all the best. Be strong through tough times stay optimistic, surround yourself with people that will care and love you, stay healthy, be successful in your career path and lastly enjoy life being 18 ( I did not include be beautiful because you already are hahaha). Happy Birthday"
-    }, {
       name: 'Kysha',
-      message: "Happy Birthday! &#127874;&#127881; today is your birthday and I think it's your first time to celebrate your birthday away from your family, my wish to you is to be more brave, indepedent and have a good health. Thank you for appreciating the love and giving fun to our fellow Filipinos, you are a down to earth person and a soft hearted person. Good luck for your studies and for your career that you want to pursue someday. HAPPY BIRTHDAY QUEEN D &#128147;&#127881;"
+      message: "Happy Birthday! &#127874;&#127881; today is your birthday and I think it's your first time to celebrate your birthday away from your family, my wish to you is to be more brave, indepedent and have a good health. \
+      Thank you for appreciating the love and giving fun to our fellow Filipinos, you are a down to earth person and a soft hearted person. \
+      Check out <a href=\"https://www.youtube.com/embed/SGPF6lo6DLY\">this</a> latest video I created for your birthday. \
+      Good luck for your studies and for your career that you want to pursue someday. HAPPY BIRTHDAY QUEEN D &#128147;&#127881;"
     }, {
       name: 'Godwin',
       message: "Annyeong, Happy Birthday Dana, I wish you more birthdays to come bes, pa burgir ka naman hahaha\n\n \
@@ -127,6 +126,10 @@
       <a href=\"#\">#ABetterFuture</a> \n \
       <a href=\"#\">#TheAngelThatChangedMEfortheBest</a> \n \
       <a href=\"#\">#ForDANA</a>"
+    }, {
+      name: 'Mikki',
+      alias: '선생님 / 오빠 Mikki',
+      message: "I'll make it simple, wishing you all the best. Be strong through tough times stay optimistic, surround yourself with people that will care and love you, stay healthy, be successful in your career path and lastly enjoy life being 18 ( I did not include be beautiful because you already are hahaha). Happy Birthday"
     }];
 
   const urlParams = new URLSearchParams(window.location.search);
