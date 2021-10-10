@@ -42,7 +42,7 @@ x = setInterval(function() {
   document.getElementById('day').innerText = Math.floor(distance / day);
   document.getElementById('hour').innerText = Math.floor(
     (distance % day) / hour
-  ) - 1;
+  );
   document.getElementById('minute').innerText = Math.floor(
     (distance % hour) / minute
   );
