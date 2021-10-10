@@ -54,8 +54,13 @@
     }
     this.play();
   });
-  myAudio.addEventListener('timeupdate', function () {
-    localStorage.setItem('currentTime', this.currentTime);
+  myAudio.addEventListener("timeupdate", function () {
+    if (this.currentTime > currentTime) {
+      localStorage.setItem("currentTime", this.currentTime);
+    }
+    if (this.currentTime === this.duration) {
+      localStorage.setItem("currentTime", 0);
+    }
   });
 </script>
 

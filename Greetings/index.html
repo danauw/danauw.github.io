@@ -44,16 +44,21 @@
     <script src="balloon.js"></script>
     <script src="script.js"></script>
     <script>
-      const myAudio = document.getElementById('bg-music');
-      const currentTime = localStorage.getItem('currentTime');
-      myAudio.addEventListener('canplaythrough', function() {
+      const myAudio = document.getElementById("bg-music");
+      const currentTime = localStorage.getItem("currentTime");
+      myAudio.addEventListener("canplaythrough", function () {
         if (currentTime && this.currentTime < currentTime) {
           this.currentTime = currentTime;
         }
         this.play();
       });
-      myAudio.addEventListener('timeupdate', function () {
-        localStorage.setItem('currentTime', this.currentTime);
+      myAudio.addEventListener("timeupdate", function () {
+        if (this.currentTime > currentTime) {
+          localStorage.setItem("currentTime", this.currentTime);
+        }
+        if (this.currentTime === this.duration) {
+          localStorage.setItem("currentTime", 0);
+        }
       });
     </script>
   </body>
