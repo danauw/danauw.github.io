@@ -188,10 +188,11 @@
       myAudio.addEventListener('canplaythrough', function() {
         if (currentTime && this.currentTime < currentTime) {
           this.currentTime = currentTime;
-        } else {
-          localStorage.setItem('currentTime', this.currentTime);
         }
         this.play();
+      });
+      myAudio.addEventListener('timeupdate', function () {
+        localStorage.setItem('currentTime', this.currentTime);
       });
     </script>
   </body>
