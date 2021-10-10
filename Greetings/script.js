@@ -37,23 +37,32 @@
     ],
     font = fontList[Math.floor(Math.random()*fontList.length)],
     froms = [{
-      name: 'Petter',
-      message: 'A sample message'
-    }, {
       name: 'Mikki',
-      message: 'Another message'
+      message: "I'll make it simple, wishing you all the best. Be strong through tough times stay optimistic, surround yourself with people that will care and love you, stay healthy, be successful in your career path and lastly enjoy life being 18 ( I did not include be beautiful because you already are hahaha). Happy Birthday"
     }, {
       name: 'Kysha',
-      message: 'Kakantahan nalang kita as gift ko sayo <3'
+      message: "Happy Birthday! &#127874;&#127881; today is your birthday and I think it's your first time to celebrate your birthday away from your family, my wish to you is to be more brave, indepedent and have a good health. Thank you for appreciating the love and giving fun to our fellow Filipinos, you are a down to earth person and a soft hearted person. Good luck for your studies and for your career that you want to pursue someday. HAPPY BIRTHDAY QUEEN D &#128147;&#127881;"
     }, {
       name: 'Aris',
-      message: 'I am potato'
+      message: "May all your dreams come true in this new stage that you are beginning, now you're 18 you should always remember, Greater age, greater freedom, but also greater responsibility! don’t let adulthood take away the joy of being young. Happy 18th Birthday Dana &#129392;"
     }, {
-      name: 'Godwin',
-      message: 'Hehehehe'
+      name: 'Petter',
+      message: "I'll just keep my keep my greetings short. HBD"
     }, {
-      name: 'Romano',
-      message: 'What\s on your mind?'
+      name: 'Joshuagrey4',
+      message: "Our age is merely the number of years the world has been enjoying us, and i hope your celebration gives you many happy memories! Happy birthday Dana! &#127874;"
+    }, {
+      name: 'Elvin',
+      message: "Hello. First of all I am grateful to those who helped us get to know you. Happy birthday Dana wish you all the best good health and have fun today. Do everything you want as if the world were yours. So I can be your number 1 fan/ boyfriend jk. HAHAHAHAHA Just don't forget us like this ha and I hope we have many more birthdays to celebrate with you"
+    }, {
+      name: 'Nio',
+      message: "Happy birthday Dana. I hope your day are filled with happiness and blessing, make your day special as you are and thank you for making us happy and inspired"
+    }, {
+      name: 'RimuruSenpai',
+      message: "Good day, Dana. I'm not sure if you remember me, but I was the one who said something like \"Dana is sad because the food tastes bad\" on one of your live. Uhmm... I'm sad that I won't be able to watch your live or assist you for the time being due of school obligations, but that won't stop me from honoring your far-flung influence on my life today. I just wanted to say Happy Birthday to someone who has been a big source of inspiration in my life.Happy Birthday to the most wonderful and possibly slightly crazy person I've ever met. I wish you a very happy birthday. Words are insufficient to describe your impact on the lives of those around you. My crush/idol, We've gathered today to express our gratitude. I hope many years of blessings follow you wherever you go. God bless. May all of your wishes come true in the coming year"
+    }, {
+      name: 'Jed',
+      message: "Goodmorning Dana Happy birthday to you&#129395;&#129313; Wish you all the best especially sa mga gusto mong mapuntahan na lugar i know you like traveling keep safe always more country is waiting to you that's all thankyou &#129392; wait i forgot *More Burgirr to comee* and i thankyou Keep safe always <a href=\"#\">#Weloveyou</a> <a href=\"#\">#nagmamahalngtapatkaymin</a> <a href=\"#\">#SoonBayaw</a> &#129392;&#129392;&#129392;"
     }];
 
   const urlParams = new URLSearchParams(window.location.search);

@@ -80,10 +80,9 @@ canvas, #balloon-container {
   color: #fff;
 }
 #card-inside {
-  font-size: 1.1em;
+  font-size: 18px;
   line-height: 1.4;
   color: #331717;
-  font-style: italic;
 }
 
 p {
