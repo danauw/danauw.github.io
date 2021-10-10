@@ -92,7 +92,7 @@
   if (prevUser) {
     prev.setAttribute('href', '?from=' + prevUser.name);
   } else {
-    next.style.display = 'none';
+    prev.style.display = 'none';
   }
 
   // update next url
