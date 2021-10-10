@@ -6,7 +6,7 @@ const canvasC = document.getElementById('c');
 const urlParams = new URLSearchParams(window.location.search);
 const belated = urlParams.has('belated');
 const isMobile = navigator.userAgentData.mobile;
-let year = '2021'
+let year = '2020'
 if (belated) {
   year = '2020';
 }
