@@ -184,7 +184,7 @@
     <script src="demo1.151408fb.js"></script>
     <script>
       const myAudio = document.getElementById('bg-music');
-      const currentTime = localStorage.get('currentTime');
+      const currentTime = localStorage.getItem('currentTime');
       myAudio.addEventListener('canplaythrough', function() {
         if (currentTime && this.currentTime < currentTime) {
           this.currentTime = currentTime;
