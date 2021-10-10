@@ -9,20 +9,28 @@
     <link rel="stylesheet" href="https://use.typekit.net/gpd2hso.css" />
   </head>
   <body>
+    <embed
+      src="../mp3s/bg-music.mp3"
+      loop="true"
+      autostart="true"
+      width="2"
+      height="0"
+    />
     <nav id="links" class="prev">
       <a href="#" id="prev">Previous</a>
     </nav>
     <nav id="links" class="next">
       <a href="#" id="next">Next</a>
     </nav>
-    <div id="balloon-container"></div>
-    <canvas id="confetti"></canvas>
+    <div id="balloon-container" style="display: none"></div>
+    <canvas id="confetti" style="display: none"></canvas>
     <div id="card">
       <div id="card-inside">
         <div class="wrap">
           <p>Hi Dana,</p>
           <p id="message">Your message here...</p>
-          <p class="signed" id="from">User,</p>
+          <p class="signed" id="closing-remark"></p>
+          <p class="signed" id="from"></p>
         </div>
       </div>
 

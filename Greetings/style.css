@@ -20,6 +20,7 @@ body {
   --color-link-hover: #ff5ba4;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 50px;
 }
 canvas, #balloon-container {
   position: absolute;
@@ -31,19 +32,13 @@ canvas, #balloon-container {
   color: #ffdfdf;
 }
 
-#card,
-#card-front,
-#card-inside {
-  height: 700px;
-}
-
 .wrap {
   padding: 1.5em 2.5em;
   height: 100%;
 }
 #card-front,
 #card-inside {
-  width: 50%;
+  width: 75%;
   -webkit-box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.25),
     0 0 1px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.25), 0 0 1px rgba(0, 0, 0, 0.5);
@@ -53,6 +48,7 @@ canvas, #balloon-container {
 }
 
 #card-inside .wrap {
+  overflow-y: auto;
   background: #ffefef;
   -webkit-box-shadow: inset 2px 0 1px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: inset 2px 0 1px rgba(0, 0, 0, 0.05);
@@ -86,6 +82,7 @@ canvas, #balloon-container {
   font-size: 18px;
   line-height: 1.4;
   color: #331717;
+  height: 100%;
 }
 
 p {
@@ -101,8 +98,11 @@ p:nth-child(2) {
 }
 
 p.signed {
-  margin-top: 1.5em;
+  margin: 0;
   text-align: right;
+}
+p.signed:first-child {
+  margin-top: 2em;
 }
 
 #card-front {
