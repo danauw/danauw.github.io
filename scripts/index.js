@@ -40,7 +40,7 @@ const second = 1000,
 
 let countDown = convertTZ(`${config.birthdate} 00:00:00`, 'Asia/Seoul').getTime();
 x = setInterval(function() {
-  let now = new Date().getTime(),
+  let now = convertTZ(new Date()).getTime(),
     distance = countDown - now;
 
   document.getElementById('day').innerText = Math.floor(distance / day);
