@@ -56,6 +56,7 @@ canvas, #balloon-container {
 }
 #card-inside a {
   font-family: inherit !important;
+  color: var(--color-link-hover);
 }
 #card {
   max-width: 960px;
