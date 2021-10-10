@@ -1,16 +1,21 @@
 <html>
   <head>
     <title>Birthday Card</title>
+    <link rel="stylesheet" href="balloon.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/gpd2hso.css" />
   </head>
   <body>
+    <nav id="links">
+      <a href="#" id="next">Next</a>
+    </nav>
     <canvas id="confetti"></canvas>
     <div id="card">
       <div id="card-inside">
         <div class="wrap">
           <p>Hi Dana,</p>
-          <p>Your message here...</p>
-          <p class="signed">User,</p>
+          <p id="message">Your message here...</p>
+          <p class="signed" id="from">User,</p>
         </div>
       </div>
 
@@ -22,7 +27,9 @@
         <button id="close">&lt;</button>
       </div>
     </div>
+
     <script src="../scripts/confetti.min.js" charset="utf-8"></script>
+    <script src="balloon.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

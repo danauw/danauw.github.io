@@ -17,6 +17,9 @@
     cardFront = $("card-front"),
     coverTitle = $("cover-title"),
     cardInside = $("card-inside"),
+    message = $("message")
+    from = $("from"),
+    next = $("next"),
     randomColor = Math.floor(Math.random() * 16777215).toString(16),
     timer = null,
     fontList = [
@@ -31,7 +34,30 @@
       '\'Itim\', cursive',
       '\'Rock Salt\', cursive'
     ],
-    font = fontList[Math.floor(Math.random()*fontList.length)];
+    font = fontList[Math.floor(Math.random()*fontList.length)],
+    froms = [{
+      name: 'Petter',
+      message: 'A sample message'
+    }, {
+      name: 'Mikki',
+      message: 'Another message'
+    }];
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const fromUser = urlParams.get('from');
+  let userIndex = 0;
+  let user = froms[userIndex];
+
+  if (fromUser) {
+    const findUser = function (user) {
+      return user.name.toLowerCase() === fromUser.toLowerCase();
+    }
+    userIndex = froms.findIndex(findUser);
+    if (userIndex === -1) {
+      userIndex = 0;
+    }
+    user = froms[userIndex];
+  }
 
   cardFront.style.backgroundColor = randomColor;
   openB.style.backgroundColor = randomColor;
@@ -40,12 +66,21 @@
   closeB.style.color = '#fff';
   coverTitle.style.color = '#fff';
 
-
   // apply random font
   coverTitle.style.fontFamily = font;
   cardInside.style.fontFamily = font;
-  openB.style.fontFamily = font;
-  closeB.style.fontFamily = font;
+
+  // apply message
+  from.innerHTML = user && user.name;
+  message.innerHTML = user && user.message.replace(/\n/g, "<br />");
+
+  // update next url
+  const nextUser = froms[userIndex + 1];
+  if (nextUser) {
+    next.setAttribute('href', '?from=' + nextUser.name);
+  } else {
+    next.style.display = 'none';
+  }
 
 
   if (isLightColor(randomColor)) {

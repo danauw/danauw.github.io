@@ -14,7 +14,12 @@
   -webkit-box-sizing: border-box;
 }
 body {
-  padding: 50px;
+  overflow: hidden;
+  margin: 0;
+  --color-link: #000;
+  --color-link-hover: #ff5ba4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 canvas {
   position: absolute;
@@ -63,6 +68,9 @@ canvas {
   -moz-perspective: 5000px;
   -webkit-perspective: 5000px;
   position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
 }
 
 #card h1 {
@@ -171,4 +179,71 @@ p.signed {
 #card.open-fully #card-front .wrap *,
 #card.close-half #card-front .wrap * {
   display: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-link);
+  outline: none;
+  position: relative;
+  font-family: rucksack, sans-serif;
+  font-size: 18px;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 1px;
+  background: currentColor;
+  left: 0;
+  bottom: -25%;
+  transform: scale3d(0, 1, 1);
+  opacity: 0;
+  transform-origin: 0% 50%;
+  transition: transform 0.3s, opacity 0s 0.3s;
+}
+
+a:hover::after {
+  opacity: 1;
+  transition: transform 0.3s;
+  transform: scale3d(1, 1, 1);
+}
+
+a:hover {
+  color: var(--color-link-hover);
+  outline: none;
+}
+
+/* Better focus styles from https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible */
+a:focus {
+  /* Provide a fallback style for browsers
+     that don't support :focus-visible */
+  outline: none;
+  background: lightgrey;
+}
+
+a:focus:not(:focus-visible) {
+  /* Remove the focus indicator on mouse-focus for browsers
+     that do support :focus-visible */
+  background: transparent;
+}
+
+a:focus-visible {
+  /* Draw a very noticeable focus style for
+     keyboard-focus on browsers that do support
+     :focus-visible */
+  outline: 2px solid red;
+  background: transparent;
+}
+
+#links {
+  position: absolute;
+  right: 5rem;
+  bottom: 5rem;
+  z-index: 100;
+}
+
+#links > a:not(:last-child) {
+  margin-right: 1rem;
 }
