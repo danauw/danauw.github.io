@@ -57,7 +57,7 @@
     }, {
       name: 'Godwin',
       message: "Annyeong, Happy Birthday Dana, I wish you more birthdays to come bes, pa burgir ka naman hahaha\n\n \
-      Check out this latest video I created for your birthday. Click <a href=\"https://www.youtube.com/embed/wZou218BL4o\">here</a>"
+      Check out <a href=\"https://www.youtube.com/embed/wZou218BL4o\">this</a> latest video I created for your birthday."
     }, {
       name: 'Aris',
       message: "May all your dreams come true in this new stage that you are beginning, now you're 18 you should always remember, Greater age, greater freedom, but also greater responsibility! don’t let adulthood take away the joy of being young. Happy 18th Birthday Dana &#129392;"
