@@ -51,8 +51,9 @@
       name: 'Kysha',
       message: "Happy Birthday! &#127874;&#127881; today is your birthday and I think it's your first time to celebrate your birthday away from your family, my wish to you is to be more brave, indepedent and have a good health. \
       Thank you for appreciating the love and giving fun to our fellow Filipinos, you are a down to earth person and a soft hearted person. \
+      Good luck for your studies and for your career that you want to pursue someday. \
       Check out <a href=\"https://www.youtube.com/embed/SGPF6lo6DLY\">this</a> latest video I created for your birthday. \
-      Good luck for your studies and for your career that you want to pursue someday. HAPPY BIRTHDAY QUEEN D &#128147;&#127881;"
+      HAPPY BIRTHDAY QUEEN D &#128147;&#127881;"
     }, {
       name: 'Godwin',
       message: "Annyeong, Happy Birthday Dana, I wish you more birthdays to come bes, pa burgir ka naman hahaha\n\n \
