@@ -171,9 +171,9 @@
     </main>
     <script src="js.00a46daa.js"></script>
     <script>
-      const myAudio = document.getElementById('bg-music');
-      const currentTime = localStorage.getItem('currentTime');
-      myAudio.addEventListener('canplaythrough', function() {
+      const myAudio = document.getElementById("bg-music");
+      const currentTime = localStorage.getItem("currentTime");
+      myAudio.addEventListener("canplaythrough", function () {
         if (currentTime && this.currentTime < currentTime) {
           this.currentTime = currentTime;
         }
@@ -183,9 +183,9 @@
         if (this.currentTime > currentTime) {
           localStorage.setItem("currentTime", this.currentTime);
         }
-        if (this.currentTime === this.duration) {
-          localStorage.setItem("currentTime", 0);
-        }
+      });
+      myAudio.addEventListener("ended", function () {
+        localStorage.setItem("currentTime", 0);
       });
     </script>
   </body>
