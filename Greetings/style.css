@@ -239,9 +239,14 @@ a:focus-visible {
 
 #links {
   position: absolute;
-  right: 5rem;
   bottom: 5rem;
   z-index: 100;
+}
+#links.prev {
+    left: 5rem;
+}
+#links.next {
+  right: 5rem;
 }
 
 #links > a:not(:last-child) {

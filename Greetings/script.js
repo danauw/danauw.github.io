@@ -19,6 +19,7 @@
     cardInside = $("card-inside"),
     message = $("message")
     from = $("from"),
+    prev = $("prev"),
     next = $("next"),
     randomColor = Math.floor(Math.random() * 16777215).toString(16),
     timer = null,
@@ -41,6 +42,18 @@
     }, {
       name: 'Mikki',
       message: 'Another message'
+    }, {
+      name: 'Kysha',
+      message: 'Kakantahan nalang kita as gift ko sayo <3'
+    }, {
+      name: 'Aris',
+      message: 'I am potato'
+    }, {
+      name: 'Godwin',
+      message: 'Hehehehe'
+    }, {
+      name: 'Romano',
+      message: 'What\s on your mind?'
     }];
 
   const urlParams = new URLSearchParams(window.location.search);
@@ -71,8 +84,16 @@
   cardInside.style.fontFamily = font;
 
   // apply message
-  from.innerHTML = user && user.name;
+  from.innerHTML = user && '- ' + user.name;
   message.innerHTML = user && user.message.replace(/\n/g, "<br />");
+
+  // update prev url
+  const prevUser = froms[userIndex - 1];
+  if (prevUser) {
+    prev.setAttribute('href', '?from=' + prevUser.name);
+  } else {
+    next.style.display = 'none';
+  }
 
   // update next url
   const nextUser = froms[userIndex + 1];
