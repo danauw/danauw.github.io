@@ -33,7 +33,7 @@
     </script>
   </head>
   <body class="loading demo-1">
-    <audio controls loop autoplay hidden>
+    <audio controls loop autoplay hidden id="bg-music">
       <source src="../mp3s/bg-music.mp3" type="audio/mpeg" />
       Your browser does not support the audio element.
     </audio>
@@ -182,5 +182,15 @@
       </div>
     </main>
     <script src="demo1.151408fb.js"></script>
+    <script>
+      const myAudio = document.getElementById('bg-music');
+      const currentTime = localStorage.get('currentTime');
+      myAudio.addEventListener('canplaythrough', function() {
+        if (currentTime && this.currentTime < currentTime) {
+          this.currentTime = currentTime;
+        }
+        this.play();
+      });
+    </script>
   </body>
 </html>
