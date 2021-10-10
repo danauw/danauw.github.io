@@ -58,6 +58,9 @@ canvas, #balloon-container {
   -moz-box-shadow: inset 2px 0 1px rgba(0, 0, 0, 0.05);
   box-shadow: inset 2px 0 1px rgba(0, 0, 0, 0.05);
 }
+#card-inside a {
+  font-family: inherit !important;
+}
 #card {
   max-width: 960px;
   margin: 0 auto;
