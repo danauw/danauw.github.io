@@ -23,10 +23,6 @@ function hideEverything() {
   canvasC.style.display = 'none';
 }
 
-function convertTZ(date, tzString) {
-  return new Date((typeof date === "string" ? new Date(date) : date).toLocaleString("en-US", {timeZone: tzString}));
-}
-
 hideEverything();
 
 const confettiSettings = { target: 'confetti' };
@@ -38,15 +34,15 @@ const second = 1000,
   hour = minute * 60,
   day = hour * 24;
 
-let countDown = convertTZ(`${config.birthdate} 00:00:00`, 'Asia/Seoul').getTime();
+let countDown = new Date(`${config.birthdate} 00:00:00`).getTime();
 x = setInterval(function() {
-  let now = convertTZ(new Date()).getTime(),
+  let now = new Date().getTime(),
     distance = countDown - now;
 
   document.getElementById('day').innerText = Math.floor(distance / day);
   document.getElementById('hour').innerText = Math.floor(
     (distance % day) / hour
-  );
+  ) - 1;
   document.getElementById('minute').innerText = Math.floor(
     (distance % hour) / minute
   );
