@@ -21,7 +21,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-canvas {
+canvas, #balloon-container {
   position: absolute;
   top: 0;
   left: 0;
